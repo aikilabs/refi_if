@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:refi_ife/utils/dimensions.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../components/icon_button.dart';
 import '../../../../utils/color_manager.dart';
@@ -43,10 +44,13 @@ class MobileIconBar extends StatelessWidget {
           SizedBox(
             height: 20.mHeight(context),
           ),
-          const Row(
+          Row(
             children: [
               CircularIconButton(
-                icon: FontAwesomeIcons.facebook,
+                icon: FontAwesomeIcons.twitter,
+                onPressed: () async {
+                  await launchUrlString("https://twitter.com/refi_ife");
+                },
               ),
               CircularIconButton(
                 icon: FontAwesomeIcons.youtube,
@@ -55,7 +59,10 @@ class MobileIconBar extends StatelessWidget {
                 icon: FontAwesomeIcons.discord,
               ),
               CircularIconButton(
-                icon: FontAwesomeIcons.figma,
+                icon: FontAwesomeIcons.telegram,
+                onPressed: () async {
+                  await launchUrlString("https://t.me/+Bbb5VsxLmloyNWM0");
+                },
               ),
               CircularIconButton(
                 icon: FontAwesomeIcons.whatsapp,

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../components/custom_button.dart';
 import '../../../../components/multicolored_text.dart';
@@ -36,7 +37,9 @@ class DesktopExploreBar extends StatelessWidget {
           ),
           SizedBox(height: height * 0.08),
           CustomButton(
-            onPressed: () {},
+            onPressed: () async {
+              await launchUrlString("https://t.me/+Bbb5VsxLmloyNWM0");
+            },
             text: HomeStringManager.getStarted,
             width: 180,
             fontSize: 16,

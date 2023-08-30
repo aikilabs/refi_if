@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../components/custom_button.dart';
 import '../../../../components/multicolored_text.dart';
@@ -29,7 +30,7 @@ class MobileExploreBar extends StatelessWidget {
                 primaryColor: ColorManager.white,
                 secondaryColor: ColorManager.primary,
                 textAlign: TextAlign.center,
-                fontSize: width * 0.03),
+                fontSize: 18),
             SizedBox(
               height: height * 0.015,
             ),
@@ -37,13 +38,15 @@ class MobileExploreBar extends StatelessWidget {
               HomeStringManager.exploreDetails,
               textAlign: TextAlign.center,
               style: getMediumTextStyle(
-                  color: ColorManager.hintGrey, fontSize: width * 0.014),
+                  color: ColorManager.hintGrey, fontSize: 12),
             ),
             SizedBox(height: height * 0.08),
             CustomButton(
-              onPressed: () {},
+              onPressed: () async {
+                await launchUrlString("https://t.me/+Bbb5VsxLmloyNWM0");
+              },
               text: HomeStringManager.getStarted,
-              width: width * 0.42,
+              width: width * 0.7,
             )
           ],
         ),

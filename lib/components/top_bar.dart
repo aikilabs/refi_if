@@ -29,17 +29,6 @@ class HomeTopBar extends StatelessWidget {
           style: getStrongBoldTextStyle(
               color: ColorManager.white, fontSize: width * 0.02),
         ),
-        Spacer(),
-        ElevatedButton.icon(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-                backgroundColor: ColorManager.iconBackgroundGrey,
-                shape: StadiumBorder()),
-            icon: Icon(
-              Icons.location_on,
-              color: ColorManager.white,
-            ),
-            label: Text("ENG"))
       ],
     );
   }
